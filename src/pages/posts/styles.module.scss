@@ -4,18 +4,17 @@
     margin: 0 auto;
   }
   
-  .posts {
+.posts {
     max-width: 720px;
     margin: 5rem auto 0;
   
     a {
-      display: block;
-  
-      & + a {
+        display: block;
+        text-decoration: none;
         padding-top: 2rem;
         border-top: 2px solid var(--gray-700);
         margin-top: 2rem;
-      }
+   
   
       time {
         display: flex;
