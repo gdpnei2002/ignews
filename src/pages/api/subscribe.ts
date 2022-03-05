@@ -45,7 +45,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       customer: customerId,
       payment_method_types: ["card"],
       billing_address_collection: "required",
-      line_items: [{ price: "price_1KE1QZDNXuuaLtdtIuXSAuei", quantity: 1 }],
+      line_items: [{ price: "price_1KURKqJLrdU7ljk9dUkwPGsP", quantity: 1 }],
       mode: "subscription",
       allow_promotion_codes: true,
       success_url: process.env.STRIPE_SUCCESS_URL,
