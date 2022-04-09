@@ -1,12 +1,12 @@
 
 import NextAuth from "next-auth";
+import { Provider } from "next-auth/providers";
 import GithubProvider from "next-auth/providers/github";
 
 import { query as q } from "faunadb";
 import{ fauna } from "../../../services/fauna"
 
 import { signIn } from "next-auth/react";
-
 
 export default NextAuth({
   providers: [
