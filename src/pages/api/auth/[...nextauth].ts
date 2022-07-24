@@ -1,12 +1,8 @@
-
 import NextAuth from "next-auth";
-import { Provider } from "next-auth/providers";
 import GithubProvider from "next-auth/providers/github";
-
 import { query as q } from "faunadb";
-import{ fauna } from "../../../services/fauna"
 
-import { signIn } from "next-auth/react";
+import { fauna } from "../../../services/fauna";
 
 export default NextAuth({
   providers: [
@@ -20,7 +16,6 @@ export default NextAuth({
       },
     }),
   ],
-  
   callbacks: {
     async signIn({ user }) {
       const { email } = user;
@@ -43,7 +38,7 @@ export default NextAuth({
         return false;
       }
     },
-     async session({ session }) {
+    async session({ session }) {
       try {
         const userActiveSubscription = await fauna.query(
           q.Get(
